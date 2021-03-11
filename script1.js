@@ -8,7 +8,7 @@ const obj = {
 	znak: "/",
 }
 
-function SuperMath(obj) {
+function SuperMath() {
 	this.obj = obj;
 }
 
@@ -29,7 +29,7 @@ SuperMath.prototype.input = function () {
 	}
 }
 
-const p = new SuperMath(obj);
+const p = new SuperMath();
 
 p.check = function () {
 	const isZnak = confirm("Произвести действие znak c Х и У?");
@@ -41,4 +41,4 @@ p.check = function () {
 	}
 }
 
-p.check(obj);
+p.check();
