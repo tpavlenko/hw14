@@ -8,7 +8,7 @@ const obj = {
 	znak: "/",
 }
 
-function SuperMath() {
+function SuperMath(obj) {
 	this.obj = obj;
 }
 
@@ -16,28 +16,28 @@ SuperMath.prototype.input = function () {
 	const customZnak = prompt("Введите знак");
 	switch (customZnak) {
 		case '+':
-			return X + Y;
+			return obj.X + obj.Y;
 
 		case '-':
-			return X - Y;
+			return obj.X - obj.Y;
 
 		case '*':
-			return X * Y;
+			return obj.X * obj.Y;
 
 		case '%':
-			return X % Y;
+			return obj.X % obj.Y;
 	}
 }
 
-const p = new SuperMath();
+const p = new SuperMath(obj);
 
 p.check = function () {
 	const isZnak = confirm("Произвести действие znak c Х и У?");
 
 	if (isZnak === true) {
-		return X / Y;
+		return obj.X / obj.Y;
 	} else {
-		input()
+		p.input()
 	}
 }
 
