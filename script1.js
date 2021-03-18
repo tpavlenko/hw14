@@ -42,5 +42,5 @@ p.check = function () {
 	}
 }
 
-const result = p.check()
+const result = p.check();
 console.log(result);
