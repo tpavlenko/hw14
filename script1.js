@@ -2,6 +2,7 @@
 
 //  p = new SuperMath(); p.check(obj); // --> no p.input() -> 3 prompt -> считает
 
+
 const obj = {
 	X: 12,
 	Y: 3,
@@ -37,8 +38,9 @@ p.check = function () {
 	if (isZnak === true) {
 		return obj.X / obj.Y;
 	} else {
-		p.input()
+		return p.input();
 	}
 }
 
-p.check();
+const result = p.check()
+console.log(result);
